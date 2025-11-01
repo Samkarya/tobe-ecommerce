@@ -1,0 +1,101 @@
+.product-display {
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.product-display-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.product-display .pagetitle {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.product-display .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.pagination ul {
+    display: flex;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pagination ul li {
+    padding: 8px 14px;
+    border-radius: 6px;
+    background: #f5f5f5;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+    user-select: none;
+}
+
+.pagination ul li:hover {
+    background: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+.pagination ul li.active {
+    background: #f39c12;
+    color: #fff;
+    font-weight: 600;
+}
+
+.sort {
+    display: inline-block;
+    position: relative;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.sort select {
+    padding: 10px 40px 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23666666%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-13%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2013l128%20127.9c3.6%203.6%207.8%205.4%2013%205.4s9.4-1.8%2013-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-13%200-5-1.9-9.4-5.4-13z%22/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 15px top 50%;
+    background-size: .65em auto;
+}
+
+.sort select:hover {
+    border-color: #666;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .product-display {
+        padding: 15px;
+    }
+    .product-display .pagetitle {
+        font-size: 1.8rem;
+    }
+}

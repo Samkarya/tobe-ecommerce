@@ -1,0 +1,47 @@
+.loading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-container.overlay {
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+}
+
+.loading-container.overlay .loading i {
+    font-size: 2.5rem;
+    color: #f39c12;
+    animation: spin 1s linear infinite;
+}
+
+.loading-container.overlay .text {
+    margin-top: 0.8rem;
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.loading-container.inline {
+    display: inline-flex;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.loading-container.inline .loading i {
+    font-size: 1.2rem;
+    color: #f39c12;
+    animation: spin 1s linear infinite;
+}
+
+.loading-container.inline .text {
+    font-weight: 500;
+    color: #333;
+}

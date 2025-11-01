@@ -1,0 +1,158 @@
+.modal-overview {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+    padding: 1rem;
+}
+
+.modal-container {
+    background: #fff;
+    border-radius: 12px;
+    width: 420px;
+    max-width: 100%;
+    padding: 1.2rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    animation: fadeInUp 0.3s ease;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid #f39c12;
+}
+
+.modal-header .title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111;
+}
+
+.modal-header .close {
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #777;
+    transition: color 0.2s ease;
+    padding: 0.2rem;
+}
+
+.modal-header .close:hover {
+    color: #e74c3c;
+}
+
+.form-area {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #f39c12;
+    box-shadow: 0 0 0 2px rgba(243, 156, 18, 0.2);
+}
+
+.form-action {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.8rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.form-action button {
+    border: none;
+    border-radius: 8px;
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: background 0.2s ease, transform 0.1s ease;
+    min-width: 100px;
+    justify-content: center;
+}
+
+.form-action .save {
+    background: #f39c12;
+    color: #fff;
+    box-shadow: 0 2px 6px rgba(243, 156, 18, 0.3);
+}
+
+.form-action .save:hover {
+    background: #e67e22;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(243, 156, 18, 0.4);
+}
+
+.form-action .cancel {
+    background: #e0e0e0;
+    color: #333;
+}
+
+.form-action .cancel:hover {
+    background: #bdbdbd;
+    transform: translateY(-1px);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-container {
+        padding: 1rem;
+    }
+    .form-action {
+        flex-direction: column;
+    }
+    .form-action button {
+        width: 100%;
+    }
+}
